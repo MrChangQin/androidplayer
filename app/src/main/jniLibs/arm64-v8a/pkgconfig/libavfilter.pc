@@ -1,0 +1,14 @@
+prefix=/home/ubuntu2204/workspace/ffmpeg/android/arm64-v8a
+exec_prefix=${prefix}
+libdir=/home/ubuntu2204/workspace/ffmpeg/android/libs/arm64-v8a
+includedir=/home/ubuntu2204/workspace/ffmpeg/android/arm64-v8a/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 7.110.100
+Requires: 
+Requires.private: libswscale >= 5.9.100, libpostproc >= 55.9.100, libavformat >= 58.76.100, libavcodec >= 58.134.100, libswresample >= 3.9.100, libavutil >= 56.70.100
+Conflicts:
+Libs: -L${libdir}  -lavfilter 
+Libs.private: -pthread -lm -latomic
+Cflags: -I${includedir}
